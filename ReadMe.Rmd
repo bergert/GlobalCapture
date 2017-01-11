@@ -27,6 +27,15 @@ http:www.fao.org/fishery/statistics/global-capture-production/query/en, and save
 FAO.FishStat.Global Capture Production.Data: 2014.<br>
 FAO - Fisheries and Aquaculture Information and Statistics Branch - downloaded 09/01/2017
 
+The github repository is here:
+https://github.com/bergertom/GlobalCapture
+
+The markdown result can be accessed here:
+https://bergertom.github.io/GlobalCapture/ReadMe.html
+
+And the leaflet is published here:
+https://bergertom.github.io/GlobalCapture/
+
 ## Loading and cleaning the data
 
 ```{r }
