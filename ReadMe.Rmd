@@ -76,9 +76,9 @@ The first step is to add the popup text to the data
    faodata$popup <- paste0("<strong>Country: </strong>", 
                         faodata$Country, " (", faodata$ISO3, ")",
                         "<br><strong>", 
-                        "Catch (tons)", 
+                        "Catch (1000 tons)", 
                         ": </strong>", 
-                        round(faodata$Value.2014),0)
+                        round(faodata$Value.2014/1000,2))
 ```
 
 Download the map data
@@ -118,8 +118,10 @@ Create the interactive map:
    #Tiles coming from stamen.com
    tiles <- "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
    # legal copyrights
-   attribution <- paste0('by Thomas Berger generated on ',format(Sys.Date(), "%Y-%m-%d"),
+   attribution <- paste0('by <a href="https://github.com/bergertom/GlobalCapture">Thomas</a>',
+        ' generated ',format(Sys.Date(), "%Y-%m-%d"),
         ', Maps by <a href="http://www.naturalearthdata.com/">Natural Earth</a>',
+        ', Tiles by <a href="http://stamen.com">Stamen Design</a>',
         ', 2014 Fishery capture data by <a href="http:www.fao.org/fishery/statistics/">FAO</a>.')
    
    #And finally the map:
